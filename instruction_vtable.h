@@ -25,13 +25,17 @@ private:
     std::string _externalId;
     long _internalId;
     
-//    InstructionID instructionId;
+    functionPtr _funcPtr;
     
     
 public:
+    _sharedPtr() : _externalId(""), _internalId(-1) {}
+
     _sharedPtr(char* strId) : _externalId(strId), _internalId(0) {}
     
-    std::string& getStringId() {
+    _sharedPtr(char* strId, functionPtr ptr) : _externalId(strId), _internalId(0), _funcPtr(ptr) {}
+    
+    std::string getStringId() {
         return _externalId;
     }
     
@@ -56,8 +60,12 @@ public:
         }
         return false;
     }
+
 } SharedFunction;
 
+/*
+ *      CLASS
+ */
 class IVtable {
     /* FUNCTIONS */
 private:
@@ -69,7 +77,7 @@ public:
     
     ~IVtable();
     
-    std::map<unsigned long, SharedFunction>::iterator findFunction(long funcId);
+    void executeFunction(long funcId);
     
     bool insertSharedFunction(SharedFunction&);
     

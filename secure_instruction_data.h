@@ -1,36 +1,32 @@
 //
-//  instruction_data.h
+//  secure_instruction_data.h
 //  Distributor
 //
-//  Created by Nick C. on 5/28/14.
+//  Created by Nick C. on 5/31/14.
 //  Copyright (c) 2014 fORGED. All rights reserved.
 //
 
-#ifndef __Distributor__instruction_data__
-#define __Distributor__instruction_data__
+#ifndef Distributor_secure_instruction_data_h
+#define Distributor_secure_instruction_data_h
 
-#include <iostream>
-
-#include "generic_data.h"
-
-class InstructionData : GenericData<InstructionData> {
+class SecureInstructionData : GenericData<SecureInstructionData> {
     /* FUNCTIONS */
 private:
     char* getDataSecure();
-    
+
 protected:
-    
+
 public:
-    InstructionData();
+    SecureInstructionData();
 
-    ~InstructionData();
-
-    bool doAuthentication();
+    ~SecureInstructionData();
 
     void serialize(std::ostream &stream);
 
     void deSerialize(std::ostream &stream);
-    
+
+    bool doAuthentication();
+
     char* getData() {
         if(doAuthentication()) {
             return getDataSecure();
@@ -39,14 +35,14 @@ public:
             return NULL;
         }
     }
-    
+
     /* VARIABLES */
 private:
-    
+
 protected:
-    
+
 public:
     
 };
 
-#endif /* defined(__Distributor__instruction_data__) */
+#endif

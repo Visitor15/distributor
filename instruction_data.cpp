@@ -7,3 +7,20 @@
 //
 
 #include "instruction_data.h"
+
+
+InstructionData::InstructionData() {
+
+}
+
+InstructionData::~InstructionData() {
+
+}
+
+void InstructionData::serialize(std::ostream &stream) {
+
+}
+
+void InstructionData::deSerialize(std::ostream &stream) {
+
+}

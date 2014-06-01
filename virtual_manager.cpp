@@ -7,7 +7,6 @@
 //
 
 #include "virtual_manager.h"
-#include <climits>
 
 static const int FAILED_REGISTRATION = -1;
 

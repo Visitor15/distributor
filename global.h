@@ -12,15 +12,31 @@
 #include <atomic>
 #include <map>
 #include <vector>
+#include <iostream>
 
 #include "manager.h"
+
+class Manager;
+
+class SCHEMES {
+public:
+    inline static std::string LOCAL() {
+        return "local";
+    }
+
+    inline static std::string LOCAL_NETWORK() {
+        return "local_net";
+    }
+
+    inline static std::string INTERNET() {
+        return "net";
+    }
+};
 
 enum EMANAGER_TYPE {
     TASK_MANAGER = 0,
     VIRTUAL_MANAGER = 1
 };
-
-class Global;
 
 class Global {
     /* FUNCTIONS */

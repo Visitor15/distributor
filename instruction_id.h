@@ -12,11 +12,13 @@
 #include <iostream>
 
 #include "instruction_response.h"
+#include "uri.h"
+
+class Uri;
 
 class InstructionID {
     /* FUNCTIONS */
 private:
-    void resolveUri();
     
 protected:
     
@@ -26,13 +28,19 @@ public:
     InstructionID(long, std::string);
     
     ~InstructionID();
+
+    bool canResolveUri();
     
-    bool fetchInstruction(InstructionResponse&);
+    bool executeInstruction(InstructionResponse&);
     
     long getInternalId();
+
+    std::string getExternalId();
     
     /* VARIABLES */
 private:
+    Uri* _uri;
+
     std::string _uriStr;
     
     std::string _externalId;

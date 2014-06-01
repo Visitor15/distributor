@@ -11,9 +11,12 @@
 
 #include <iostream>
 
+#include "instruction_response.h"
+
 class Distributor {
     /* FUNCTIONS */
 private:
+    static InstructionResponse MY_SHARED_FUNCTION(InstructionData data);
     
 protected:
     

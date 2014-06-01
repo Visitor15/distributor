@@ -7,3 +7,19 @@
 //
 
 #include "generic_response.h"
+
+GenericInstructionResponse::GenericInstructionResponse() : InstructionResponse() {
+    
+}
+
+GenericInstructionResponse::GenericInstructionResponse(InstructionData data) : InstructionResponse(data) {
+    
+}
+
+GenericInstructionResponse::~GenericInstructionResponse() {
+    
+}
+
+void GenericInstructionResponse::initialize() {
+    
+}

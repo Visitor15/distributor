@@ -25,3 +25,7 @@ bool IVtable::insertSharedFunction(SharedFunction &func) {
     
     return true;
 }
+
+void IVtable::executeFunction(long funcId) {
+
+}

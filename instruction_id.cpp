@@ -19,12 +19,27 @@ InstructionID::~InstructionID() {
 InstructionID::InstructionID(long numId, std::string strId) {
     _externalId = strId;
     _internalId = numId;
+    _uri = new Uri(_internalId, _externalId);
 }
 
 long InstructionID::getInternalId() {
     return _internalId;
 }
 
-bool InstructionID::fetchInstruction(InstructionResponse &data) {
+std::string InstructionID::getExternalId() {
+    return _externalId;
+}
+
+bool InstructionID::canResolveUri() {
+    return true;
+}
+
+bool InstructionID::executeInstruction(InstructionResponse &data) {
+    if(!_uri->resolve()) {
+        return false;
+    }
+
+    
+
     return true;
 }

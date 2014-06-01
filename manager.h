@@ -9,6 +9,9 @@
 #ifndef Distributor_manager_h
 #define Distributor_manager_h
 
+#include "instruction_vtable.h"
+#include "instruction_id.h"
+
 class Manager {
     /* FUNCTIONS */
 private:
@@ -17,17 +20,9 @@ protected:
     
     
 public:
-    static Manager& EMPTY_MANAGER() {
-        static Manager INSTANCE;
-        
-        return INSTANCE;
-    }
+    Manager() {}
     
-    static Manager& GET_INSTANCE();
-    
-    Manager() {};
-    
-    ~Manager() {};
+    virtual ~Manager() {}
     
     /* VARIABLES */
 private:

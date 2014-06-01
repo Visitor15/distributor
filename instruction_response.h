@@ -9,6 +9,8 @@
 #ifndef Distributor_instruction_response_h
 #define Distributor_instruction_response_h
 
+#include "instruction_data.h"
+
 class InstructionResponse {
     /* FUNCTIONS */
 private:
@@ -18,7 +20,11 @@ protected:
 public:
     InstructionResponse() {}
     
+    InstructionResponse(InstructionData data) { _data = data; };
+    
     ~InstructionResponse() {}
+
+    void initialize() {};
     
     std::string getStringData() { return "TEST"; };
     
@@ -26,6 +32,7 @@ public:
 private:
     
 protected:
+    InstructionData _data;
     
 public:
     

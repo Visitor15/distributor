@@ -12,13 +12,13 @@
 #include <iostream>
 
 #include "global.h"
+#include "instruction_id.h"
 #include "instruction_vtable.h"
-
 
 class VManager : Manager {
     /* FUNCTIONS */
 private:
-    long registerFunction(SharedFunction&);
+    long registerFunction(SharedFunction &func);
     
     bool insertFunction(long funcId, SharedFunction &function);
     
@@ -27,16 +27,16 @@ protected:
 public:
     static Manager& GET_INSTANCE();
     
-    VManager() { vTable = new IVtable(); };
+    VManager() { vTable = new IVtable(); }
     
-    ~VManager() { if(vTable) {
-        delete vTable;
-        vTable = nullptr;
-    }};
-    
-    InstructionID* registerSharedFunction(SharedFunction&);
-    
-    
+    ~VManager() {
+        if(vTable != nullptr) {
+            delete vTable;
+            vTable = nullptr;
+        }
+    }
+
+    InstructionID* registerSharedFunction(SharedFunction& func);
     
 //    InstructionID* registerInstruction(functionPtr);
     

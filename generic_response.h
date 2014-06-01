@@ -11,4 +11,34 @@
 
 #include <iostream>
 
+#include "instruction_response.h"
+
+class GenericInstructionResponse : public InstructionResponse {
+    /* FUNCTIONS */
+private:
+    
+protected:
+    
+public:
+    GenericInstructionResponse();
+    
+    GenericInstructionResponse(InstructionData data);
+    
+    ~GenericInstructionResponse();
+
+    void initialize();
+
+    void serialize();
+
+    void deSerialize();
+    
+    /* VARIABLES */
+private:
+    
+protected:
+    
+public:
+    
+};
+
 #endif /* defined(__Distributor__generic_response__) */
