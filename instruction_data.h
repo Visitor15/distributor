@@ -27,6 +27,10 @@ public:
 
     bool doAuthentication();
 
+    void setStringData(char* data);
+
+    std::string getStringData();
+
     void serialize(std::ostream &stream);
 
     void deSerialize(std::ostream &stream);

@@ -23,3 +23,7 @@ GenericInstructionResponse::~GenericInstructionResponse() {
 void GenericInstructionResponse::initialize() {
     
 }
+
+void GenericInstructionResponse::setStringData(char* data) {
+    _data.setStringData(data);
+}

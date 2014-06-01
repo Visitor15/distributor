@@ -26,6 +26,8 @@ public:
     
     ~GenericInstructionResponse();
 
+    void setStringData(char* data);
+
     void initialize();
 
     void serialize();

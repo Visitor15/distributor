@@ -30,7 +30,7 @@ public:
 private:
 
 protected:
-
+    std::string _strData;
     
 public:
     

@@ -11,12 +11,14 @@
 #include "virtual_manager.h"
 #include "instruction_id.h"
 #include "generic_response.h"
-
+#include "message_executor.h"
 
 
 SharedFunction* sharedFunc1;
 SharedFunction* sharedFunc2;
 SharedFunction* sharedFunc3;
+
+MessageExecutor* messageExec;
 
 VManager virtualManager;
 InstructionID* instruction;
@@ -28,6 +30,8 @@ void Distributor::DISTRIBUTE() {
 //    virtualManager = new VManager();
 
 //    virtualManager = std::dynamic_cast<VManager*>(Global::GET_MANAGER(EMANAGER_TYPE::VIRTUAL_MANAGER));
+
+    messageExec = new MessageExecutor();
 
     virtualManager = VManager::GET_INSTANCE();
 
@@ -69,6 +73,17 @@ void Distributor::DISTRIBUTE() {
         std::cout << "Failed to execute instruction: " << instruction->getExternalId() << std::endl;
     }
 
+    /* Message executor */
+    instruction = messageExec->getSharedFunctionID();
+    response = new GenericInstructionResponse();
+    response->initialize();
+    data = new InstructionData();
+    if(instruction->executeInstruction(*response, *data)) {
+        std::cout << "Instruction returned: " << response->getStringData() << std::endl;
+    }
+    else {
+        std::cout << "Failed to execute instruction: " << instruction->getExternalId() << std::endl;
+    }
     
     instruction = virtualManager.registerSharedFunction(*sharedFunc3);
     

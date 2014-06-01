@@ -17,6 +17,15 @@ InstructionData::~InstructionData() {
 
 }
 
+void InstructionData::setStringData(char* data) {
+    _strData = "";
+    _strData.append(data);
+}
+
+std::string InstructionData::getStringData() {
+    return _strData;
+}
+
 void InstructionData::serialize(std::ostream &stream) {
 
 }

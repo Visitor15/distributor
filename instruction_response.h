@@ -26,7 +26,7 @@ public:
 
     void initialize() {};
     
-    std::string getStringData() { return "TEST"; };
+    std::string getStringData() { return _data.getStringData(); };
     
     /* VARIABLES */
 private:
