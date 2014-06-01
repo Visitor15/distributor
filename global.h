@@ -14,10 +14,6 @@
 #include <vector>
 #include <iostream>
 
-#include "manager.h"
-
-class Manager;
-
 class SCHEMES {
 public:
     inline static std::string LOCAL() {
@@ -44,21 +40,21 @@ private:
     Global(Global const&);
     void operator=(Global const&);
     
-    Manager& getManager(EMANAGER_TYPE managerType);
-    
+//    Manager& getManager(EMANAGER_TYPE managerType);
+
 protected:
     
 public:
-    static Manager& GET_MANAGER(EMANAGER_TYPE managerType);
-    
+//    static Manager& GET_MANAGER(EMANAGER_TYPE managerType);
+
     Global();
     
     ~Global();
     
     /* VARIABLES */
 private:
-    std::map<int, Manager> registeredManagers;
-    
+//    std::map<int, Manager> registeredManagers;
+
 protected:
     
 public:

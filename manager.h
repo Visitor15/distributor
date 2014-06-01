@@ -9,9 +9,6 @@
 #ifndef Distributor_manager_h
 #define Distributor_manager_h
 
-#include "instruction_vtable.h"
-#include "instruction_id.h"
-
 class Manager {
     /* FUNCTIONS */
 private:

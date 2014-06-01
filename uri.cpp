@@ -7,14 +7,17 @@
 //
 
 #include "uri.h"
+#include "virtual_manager.h"
 
 Uri::Uri() {
-
+    initialize();
 }
 
 Uri::Uri(long internalId, std::string externalId) {
     _internalId = internalId;
     _externalId = externalId;
+
+    initialize();
 }
 
 Uri::~Uri() {
@@ -25,8 +28,8 @@ void Uri::initialize() {
     buildGenericUri();
 }
 
-bool Uri::resolve() {
-    return resolveInternal();
+bool Uri::resolve(SharedFunction &returnFunc) {
+    return resolveInternal(returnFunc);
 }
 
 void Uri::buildGenericUri() {
@@ -64,13 +67,10 @@ void Uri::buildGenericUri() {
     }
 }
 
-bool Uri::resolveInternal() {
-
+bool Uri::resolveInternal(SharedFunction &returnFunc) {
     if(_uriParts.at(EURI_PART::SCHEME)._strData.compare(SCHEMES::LOCAL()) == 0) {
-//        VManager vManager = std::static_cast<VManager>(Global::GET_MANAGER(EMANAGER_TYPE::VIRTUAL_MANAGER));
-
+        VManager::GET_INSTANCE().findSharedFunction(_internalId, returnFunc);
         return true;
     }
-
     return false;
 }

@@ -12,7 +12,7 @@ static const int FAILED_REGISTRATION = -1;
 
 static VManager INSTANCE;
 
-Manager& VManager::GET_INSTANCE() {
+VManager& VManager::GET_INSTANCE() {
     
     return INSTANCE;
 }
@@ -45,4 +45,8 @@ long VManager::registerFunction(SharedFunction &function) {
 bool VManager::insertFunction(long funcId, SharedFunction &function) {
     function.setInternalId(funcId);
     return vTable->insertSharedFunction(function);
+}
+
+bool VManager::findSharedFunction(long internalId, SharedFunction &returnFunc) {
+    return vTable->findSharedFunction(internalId, returnFunc);
 }

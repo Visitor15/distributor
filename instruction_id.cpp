@@ -34,12 +34,14 @@ bool InstructionID::canResolveUri() {
     return true;
 }
 
-bool InstructionID::executeInstruction(InstructionResponse &data) {
-    if(!_uri->resolve()) {
+bool InstructionID::executeInstruction(InstructionResponse &response, InstructionData &data) {
+    SharedFunction returnFunc;
+    if(!_uri->resolve(returnFunc)) {
         return false;
     }
 
-    
+    response = returnFunc.executeFunction(data);
+
 
     return true;
 }

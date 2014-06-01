@@ -12,6 +12,7 @@
 #include <iostream>
 
 #include "instruction_response.h"
+#include "shared_function.h"
 #include "uri.h"
 
 class Uri;
@@ -31,7 +32,7 @@ public:
 
     bool canResolveUri();
     
-    bool executeInstruction(InstructionResponse&);
+    bool executeInstruction(InstructionResponse&, InstructionData&);
     
     long getInternalId();
 

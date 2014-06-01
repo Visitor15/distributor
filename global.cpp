@@ -17,17 +17,3 @@ Global::Global() {
 Global::~Global() {
     
 }
-
-Manager& Global::GET_MANAGER(EMANAGER_TYPE managerType) {
-    return SINGLETON.getManager(managerType);
-}
-
-Manager& Global::getManager(EMANAGER_TYPE managerType) {
-    std::map<int, Manager>::iterator it = registeredManagers.begin();
-    
-    if(it == registeredManagers.end()) {
-        //TODO: Throw exception.
-    }
-    
-    return it->second;
-}

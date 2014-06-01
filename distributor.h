@@ -17,6 +17,10 @@ class Distributor {
     /* FUNCTIONS */
 private:
     static InstructionResponse MY_SHARED_FUNCTION(InstructionData data);
+
+    static InstructionResponse MY_SHARED_FUNCTION2(InstructionData data);
+
+    static InstructionResponse MY_SHARED_FUNCTION3(InstructionData data);
     
 protected:
     

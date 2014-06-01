@@ -29,3 +29,15 @@ bool IVtable::insertSharedFunction(SharedFunction &func) {
 void IVtable::executeFunction(long funcId) {
 
 }
+
+bool IVtable::findSharedFunction(long internalId, SharedFunction &returnFunc) {
+    std::map<unsigned long, SharedFunction>::iterator itter;
+
+    itter = vTable.find(internalId);
+    if(itter != vTable.end()) {
+        returnFunc = itter->second;
+        return true;
+    }
+
+    return false;
+}

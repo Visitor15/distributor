@@ -14,7 +14,9 @@
 
 #include "global.h"
 #include "network.h"
-#include "virtual_manager.h"
+#include "shared_function.h"
+
+class VManager;
 
 enum EURI_SCHEME_TYPE {
     UNKNOWN_SCHEME  = -1,
@@ -49,7 +51,7 @@ class Uri {
 private:
     void buildGenericUri();
 
-    bool resolveInternal();
+    bool resolveInternal(SharedFunction &returnFunc);
     
 protected:
     
@@ -62,7 +64,7 @@ public:
     
     void initialize();
     
-    bool resolve();
+    bool resolve(SharedFunction &returnFunc);
     
     /* VARIABLES */
 private:

@@ -11,11 +11,13 @@
 
 #include <iostream>
 
-#include "global.h"
-#include "instruction_id.h"
 #include "instruction_vtable.h"
+#include "instruction_id.h"
+#include "manager.h"
 
-class VManager : Manager {
+class InstructionID;
+
+class VManager : public Manager {
     /* FUNCTIONS */
 private:
     long registerFunction(SharedFunction &func);
@@ -25,7 +27,7 @@ private:
 protected:
     
 public:
-    static Manager& GET_INSTANCE();
+    static VManager& GET_INSTANCE();
     
     VManager() { vTable = new IVtable(); }
     
@@ -37,6 +39,8 @@ public:
     }
 
     InstructionID* registerSharedFunction(SharedFunction& func);
+
+    bool findSharedFunction(long internalId, SharedFunction &returnFunc);
     
 //    InstructionID* registerInstruction(functionPtr);
     
