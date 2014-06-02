@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 fORGED. All rights reserved.
 //
 
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
+#include <sstream>
+#endif
+
 #include "distributor.h"
 #include "global.h"
 #include "virtual_manager.h"
@@ -13,33 +17,25 @@
 #include "generic_response.h"
 #include "message_executor.h"
 
-
 SharedFunction* sharedFunc1;
 SharedFunction* sharedFunc2;
 SharedFunction* sharedFunc3;
 
 MessageExecutor* messageExec;
 
-VManager virtualManager;
 InstructionID* instruction;
 
 GenericInstructionResponse* response;
 InstructionData* data;
 
 void Distributor::DISTRIBUTE() {
-//    virtualManager = new VManager();
-
-//    virtualManager = std::dynamic_cast<VManager*>(Global::GET_MANAGER(EMANAGER_TYPE::VIRTUAL_MANAGER));
-
     messageExec = new MessageExecutor();
-
-    virtualManager = VManager::GET_INSTANCE();
 
     sharedFunc1 = new SharedFunction("TestSharedFunction1", Distributor::MY_SHARED_FUNCTION3);
     sharedFunc2 = new SharedFunction("TestSharedFunction2", Distributor::MY_SHARED_FUNCTION);
     sharedFunc3 = new SharedFunction("TestSharedFunction3", Distributor::MY_SHARED_FUNCTION2);
     
-    instruction = virtualManager.registerSharedFunction(*sharedFunc1);
+    instruction = VManager::GET_INSTANCE().registerSharedFunction(*sharedFunc1);
     
     if(instruction != nullptr) {
         std::cout << "Instruction name: " << instruction->getExternalId() << std::endl;
@@ -56,7 +52,7 @@ void Distributor::DISTRIBUTE() {
         std::cout << "Failed to execute instruction: " << instruction->getExternalId() << std::endl;
     }
     
-    instruction = virtualManager.registerSharedFunction(*sharedFunc2);
+    instruction = VManager::GET_INSTANCE().registerSharedFunction(*sharedFunc2);
     
     if(instruction != nullptr) {
         std::cout << "Instruction name: " << instruction->getExternalId() << std::endl;
@@ -85,7 +81,7 @@ void Distributor::DISTRIBUTE() {
         std::cout << "Failed to execute instruction: " << instruction->getExternalId() << std::endl;
     }
     
-    instruction = virtualManager.registerSharedFunction(*sharedFunc3);
+    instruction = VManager::GET_INSTANCE().registerSharedFunction(*sharedFunc3);
     
     if(instruction != nullptr) {
         std::cout << "Instruction name: " << instruction->getExternalId() << std::endl;
@@ -101,6 +97,20 @@ void Distributor::DISTRIBUTE() {
     else {
         std::cout << "Failed to execute instruction: " << instruction->getExternalId() << std::endl;
     }
+
+    messageExec->changeVtableEntry();
+    /* Message executor */
+    instruction = messageExec->getSharedFunctionID();
+    response = new GenericInstructionResponse();
+    response->initialize();
+    data = new InstructionData();
+    if(instruction->executeInstruction(*response, *data)) {
+        std::cout << "Instruction returned: " << response->getStringData() << std::endl;
+    }
+    else {
+        std::cout << "Failed to execute instruction: " << instruction->getExternalId() << std::endl;
+    }
+
 }
 
 Distributor::Distributor() {

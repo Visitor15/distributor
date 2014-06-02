@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{89E2A30A-14EF-44B8-8BB5-3D40986AB7D3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>VS_Distributor</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\communicator.cpp" />
+    <ClCompile Include="..\..\distributor.cpp" />
+    <ClCompile Include="..\..\generic_instruction.cpp" />
+    <ClCompile Include="..\..\generic_request.cpp" />
+    <ClCompile Include="..\..\generic_response.cpp" />
+    <ClCompile Include="..\..\global.cpp" />
+    <ClCompile Include="..\..\instruction_data.cpp" />
+    <ClCompile Include="..\..\instruction_id.cpp" />
+    <ClCompile Include="..\..\instruction_vtable.cpp" />
+    <ClCompile Include="..\..\main.cpp" />
+    <ClCompile Include="..\..\message_executor.cpp" />
+    <ClCompile Include="..\..\network.cpp" />
+    <ClCompile Include="..\..\simple_task.cpp" />
+    <ClCompile Include="..\..\task.cpp" />
+    <ClCompile Include="..\..\task_communicator.cpp" />
+    <ClCompile Include="..\..\task_handler.cpp" />
+    <ClCompile Include="..\..\task_manager.cpp" />
+    <ClCompile Include="..\..\uri.cpp" />
+    <ClCompile Include="..\..\uri_resolver.cpp" />
+    <ClCompile Include="..\..\utils.cpp" />
+    <ClCompile Include="..\..\virtual_manager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\communicator.h" />
+    <ClInclude Include="..\..\distributor.h" />
+    <ClInclude Include="..\..\generic_data.h" />
+    <ClInclude Include="..\..\generic_instruction.h" />
+    <ClInclude Include="..\..\generic_request.h" />
+    <ClInclude Include="..\..\generic_response.h" />
+    <ClInclude Include="..\..\global.h" />
+    <ClInclude Include="..\..\instruction.h" />
+    <ClInclude Include="..\..\instruction_data.h" />
+    <ClInclude Include="..\..\instruction_id.h" />
+    <ClInclude Include="..\..\instruction_request.h" />
+    <ClInclude Include="..\..\instruction_response.h" />
+    <ClInclude Include="..\..\instruction_vtable.h" />
+    <ClInclude Include="..\..\manager.h" />
+    <ClInclude Include="..\..\message_executor.h" />
+    <ClInclude Include="..\..\network.h" />
+    <ClInclude Include="..\..\secure_instruction_data.h" />
+    <ClInclude Include="..\..\serializable.h" />
+    <ClInclude Include="..\..\shared_function.h" />
+    <ClInclude Include="..\..\simple_task.h" />
+    <ClInclude Include="..\..\task.h" />
+    <ClInclude Include="..\..\task_communicator.h" />
+    <ClInclude Include="..\..\task_handler.h" />
+    <ClInclude Include="..\..\task_manager.h" />
+    <ClInclude Include="..\..\task_payload.h" />
+    <ClInclude Include="..\..\uri.h" />
+    <ClInclude Include="..\..\uri_resolver.h" />
+    <ClInclude Include="..\..\utils.h" />
+    <ClInclude Include="..\..\virtual_manager.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

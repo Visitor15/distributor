@@ -30,6 +30,8 @@ public:
 
     _sharedPtr(char* strId, functionPtr ptr) : _externalId(strId), _internalId(0), _funcPtr(ptr) {}
 
+    ~_sharedPtr() {}
+
     std::string getStringId() {
         return _externalId;
     }

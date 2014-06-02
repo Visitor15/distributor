@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 fORGED. All rights reserved.
 //
 
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
+#include <sstream>
+#endif
+
 #include "uri.h"
 #include "virtual_manager.h"
 

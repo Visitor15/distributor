@@ -31,6 +31,19 @@ InstructionResponse MessageExecutor::PRINT_MESSAGE(InstructionData data) {
     return GenericInstructionResponse(data);
 }
 
+InstructionResponse MessageExecutor::DO_CALCULATION(InstructionData data) {
+    std::cout << "Hello, from DO_CALCULATION!" << std::endl;
+
+    int returnVal = 138 + 138;
+    data.setStringData((char*) std::to_string(returnVal).c_str());
+
+    return GenericInstructionResponse(data);
+}
+
 InstructionID* MessageExecutor::getSharedFunctionID() {
     return _instructionId;
+}
+
+void MessageExecutor::changeVtableEntry() {
+    VManager::GET_INSTANCE().replaceFunction(mySharedFunc->getInternalId(), SharedFunction("ReplacedSharedFunction", MessageExecutor::DO_CALCULATION));
 }

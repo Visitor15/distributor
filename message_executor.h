@@ -9,6 +9,10 @@
 #ifndef __Distributor__message_executor__
 #define __Distributor__message_executor__
 
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
+#include <sstream>
+#endif
+
 #include <iostream>
 
 #include "virtual_manager.h"
@@ -21,6 +25,8 @@ class MessageExecutor {
 private:
     static InstructionResponse PRINT_MESSAGE(InstructionData data);
 
+    static InstructionResponse DO_CALCULATION(InstructionData data);
+
 protected:
 
 public:
@@ -31,6 +37,9 @@ public:
     void initialize();
 
     InstructionID* getSharedFunctionID();
+
+    /* Only for testing purposes. */
+    void changeVtableEntry();
 
     /* VARIABLES */
 private:

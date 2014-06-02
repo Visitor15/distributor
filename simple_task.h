@@ -11,7 +11,7 @@
 
 #include "task.h"
 
-class SimpleTask : public Task {
+class SimpleTask : public Task<SimpleTask> {
     
 public:
     SimpleTask();

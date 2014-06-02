@@ -20,6 +20,9 @@ class InstructionID;
 class VManager : public Manager {
     /* FUNCTIONS */
 private:
+    VManager(VManager const&);          // Do not implement. This is a SINGLETON!
+    void operator=(VManager const&);    // Do not implement. This is a SINGLETON!
+
     long registerFunction(SharedFunction &func);
     
     bool insertFunction(long funcId, SharedFunction &function);
@@ -41,6 +44,8 @@ public:
     InstructionID* registerSharedFunction(SharedFunction& func);
 
     bool findSharedFunction(long internalId, SharedFunction &returnFunc);
+
+    bool replaceFunction(long funcId, SharedFunction &function);
     
 //    InstructionID* registerInstruction(functionPtr);
     

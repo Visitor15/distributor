@@ -19,7 +19,7 @@ TaskHandler::~TaskHandler() {
 bool TaskHandler::registerTask(long jobId, FunctionPointer func) {
     
     if(handlerMap.find(jobId) == handlerMap.end()) {
-        handlerMap.insert(std::make_pair(jobId, std::vector<long, std::vector<FunctionPointer>>());
+        //handlerMap.insert(std::make_pair(jobId, std::vector<long, std::vector<FunctionPointer>>()));
     }
     
     return false;

@@ -12,6 +12,12 @@
 #include <iostream>
 #include <time.h>
 
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
+#include <algorithm>
+#include <functional>
+#include <cctype>
+#endif
+
 class Utils {
     /* FUNCTIONS */
 private:

@@ -26,6 +26,17 @@ bool IVtable::insertSharedFunction(SharedFunction &func) {
     return true;
 }
 
+bool IVtable::replaceSharedFunction(SharedFunction &func) {
+    std::map<unsigned long, SharedFunction>::iterator itter;
+    itter = vTable.find(func.getInternalId());
+    if(itter != vTable.end()) {
+        (*itter).second = func;
+        return true;
+    }
+
+    return false;
+}
+
 void IVtable::executeFunction(long funcId) {
 
 }
