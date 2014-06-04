@@ -47,7 +47,7 @@ bool VManager::insertFunction(long funcId, SharedFunction &function) {
     return vTable->insertSharedFunction(function);
 }
 
-bool VManager::replaceFunction(long funcId, SharedFunction &function) {
+InstructionID* VManager::replaceFunction(long funcId, SharedFunction &function) {
     function.setInternalId(funcId);
     return vTable->replaceSharedFunction(function);
 }

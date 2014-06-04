@@ -11,23 +11,29 @@
 
 #include <iostream>
 
+class Uri;      // Forward declaration for Uri*
+
 class UriResolver {
     /* FUNCTIONS */
 private:
+    bool resolveUriInternal();
 
 protected:
 
 public:
     UriResolver();
 
+    UriResolver(Uri* uriPtr);
+
     ~UriResolver();
 
     void initialize();
 
-    bool resolve(char* buffer, unsigned int length);
+    bool resolve(char* buffer = nullptr, unsigned int length = 0);
 
     /* VARIABLES */
 private:
+    Uri* _internalUriPtr;
 
 protected:
 

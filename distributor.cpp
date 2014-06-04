@@ -111,6 +111,10 @@ void Distributor::DISTRIBUTE() {
         std::cout << "Failed to execute instruction: " << instruction->getExternalId() << std::endl;
     }
 
+    std::cout << "Programming terminating" << std::endl;
+
+    int _val;
+    std::cin >> _val;
 }
 
 Distributor::Distributor() {
@@ -150,19 +154,16 @@ Distributor::~Distributor() {
 }
 
 InstructionResponse Distributor::MY_SHARED_FUNCTION(InstructionData data) {
-    std::cout << "Hello, from MY_SHARED_FUNCTION!" << std::endl;
-
+    data.setStringData("Hello, from MY_SHARED_FUNCTION!");
     return GenericInstructionResponse(data);
 }
 
 InstructionResponse Distributor::MY_SHARED_FUNCTION2(InstructionData data) {
-    std::cout << "Hello, from MY_SHARED_FUNCTION2!" << std::endl;
-
+    data.setStringData("Hello, from MY_SHARED_FUNCTION2!");
     return GenericInstructionResponse(data);
 }
 
 InstructionResponse Distributor::MY_SHARED_FUNCTION3(InstructionData data) {
-    std::cout << "Hello, from MY_SHARED_FUNCTION3!" << std::endl;
-
+    data.setStringData("Hello, from MY_SHARED_FUNCTION3!");
     return GenericInstructionResponse(data);
 }

@@ -45,7 +45,7 @@ public:
 
     bool findSharedFunction(long internalId, SharedFunction &returnFunc);
 
-    bool replaceFunction(long funcId, SharedFunction &function);
+    InstructionID* replaceFunction(long funcId, SharedFunction &function);
     
 //    InstructionID* registerInstruction(functionPtr);
     

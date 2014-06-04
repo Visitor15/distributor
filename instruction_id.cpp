@@ -42,6 +42,5 @@ bool InstructionID::executeInstruction(InstructionResponse &response, Instructio
 
     response = returnFunc.executeFunction(data);
 
-
     return true;
 }

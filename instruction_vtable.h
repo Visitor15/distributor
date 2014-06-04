@@ -36,7 +36,7 @@ public:
     
     bool insertSharedFunction(SharedFunction&);
 
-    bool replaceSharedFunction(SharedFunction&);
+    InstructionID* replaceSharedFunction(SharedFunction&);
 
     bool findSharedFunction(long internalId, SharedFunction& foundFunc);
     

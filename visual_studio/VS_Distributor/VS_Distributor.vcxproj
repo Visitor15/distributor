@@ -90,6 +90,7 @@
     <ClCompile Include="..\..\message_executor.cpp" />
     <ClCompile Include="..\..\network.cpp" />
     <ClCompile Include="..\..\simple_task.cpp" />
+    <ClCompile Include="..\..\socket_communicator.cpp" />
     <ClCompile Include="..\..\task.cpp" />
     <ClCompile Include="..\..\task_communicator.cpp" />
     <ClCompile Include="..\..\task_handler.cpp" />
@@ -120,6 +121,7 @@
     <ClInclude Include="..\..\serializable.h" />
     <ClInclude Include="..\..\shared_function.h" />
     <ClInclude Include="..\..\simple_task.h" />
+    <ClInclude Include="..\..\socket_communicator.h" />
     <ClInclude Include="..\..\task.h" />
     <ClInclude Include="..\..\task_communicator.h" />
     <ClInclude Include="..\..\task_handler.h" />

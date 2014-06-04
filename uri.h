@@ -15,6 +15,7 @@
 #include "global.h"
 #include "network.h"
 #include "shared_function.h"
+#include "uri_resolver.h"
 
 class VManager;
 
@@ -56,6 +57,8 @@ private:
 protected:
     
 public:
+    static bool BUILD_FROM_STRING(char* buff, unsigned int length, Uri* uriPtr);
+
     Uri();
 
     Uri(long, std::string);
@@ -65,12 +68,26 @@ public:
     void initialize();
     
     bool resolve(SharedFunction &returnFunc);
+
+    SharedFunction& getSharedFunction();
+
+    int getSchemeIndex();
+
+    long getInternalId();
+
+    std::string getExternalId();
+
+    std::string getScheme();
+
+    std::string getUriPath();
     
     /* VARIABLES */
 private:
     long _internalId;
 
     std::string _externalId;
+
+    SharedFunction* _internalSharedFunc;
 
     std::vector<UriPart> _uriParts;
     

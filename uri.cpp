@@ -11,7 +11,13 @@
 #endif
 
 #include "uri.h"
+#include "network.h"
 #include "virtual_manager.h"
+
+bool Uri::BUILD_FROM_STRING(char* buff, unsigned int length, Uri* uriPtr) {
+    /* TODO: Implement me! */
+    return false;
+}
 
 Uri::Uri() {
     initialize();
@@ -44,11 +50,11 @@ void Uri::buildGenericUri() {
                 break;
             }
             case EURI_PART::USER_INFO: {
-                _uriParts.push_back(UriPart(EURI_PART::USER_INFO, SCHEMES::LOCAL()));
+                _uriParts.push_back(UriPart(EURI_PART::USER_INFO, DEFAULT_USER));
                 break;
             }
             case EURI_PART::HOST_NAME: {
-                _uriParts.push_back(UriPart(EURI_PART::HOST_NAME, SCHEMES::LOCAL()));
+                _uriParts.push_back(UriPart(EURI_PART::HOST_NAME, DEFAULT_HOSTNAME));
                 break;
             }
             case EURI_PART::PORT: {
@@ -72,9 +78,50 @@ void Uri::buildGenericUri() {
 }
 
 bool Uri::resolveInternal(SharedFunction &returnFunc) {
-    if(_uriParts.at(EURI_PART::SCHEME)._strData.compare(SCHEMES::LOCAL()) == 0) {
+    _internalSharedFunc = &returnFunc;
+
+    /* This should eventually use an UriResolver. */
+    /*if(_uriParts.at(EURI_PART::SCHEME)._strData.compare(SCHEMES::LOCAL()) == 0) {
         VManager::GET_INSTANCE().findSharedFunction(_internalId, returnFunc);
         return true;
     }
-    return false;
+    else {
+        UriResolver _resolver(this);
+        return _resolver.resolve();
+    }*/
+
+    UriResolver _resolver(this);
+    return _resolver.resolve();
+}
+
+std::string Uri::getScheme() {
+    return _uriParts.at(EURI_PART::SCHEME)._strData;
+}
+
+int Uri::getSchemeIndex() {
+    return _uriParts.at(EURI_PART::SCHEME)._part_type;
+    /*std::string _scheme(getScheme());
+
+    if(_scheme.compare(SCHEMES::LOCAL()) == 0) {
+        return ESCHEME::ELOCAL;
+    }
+    else if(_scheme.compare(SCHEMES::LOCAL_NETWORK()) == 0) {
+        return ESCHEME::EDIRECT_CONNECT;
+    }
+    else if(_scheme.compare(SCHEMES::DIRECT_CONNECT()) == 0) {
+        return ESCHEME::EDIRECT_CONNECT;
+    }
+    else if(_scheme.compare(SCHEMES::INTERNET()) == 0) {
+        return ESCHEME::EHTTPS;
+    }
+
+    return -1;*/
+}
+
+long Uri::getInternalId() {
+    return _internalId;
+}
+
+SharedFunction& Uri::getSharedFunction() {
+    return *_internalSharedFunc;
 }
