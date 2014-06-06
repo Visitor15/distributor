@@ -7,7 +7,7 @@
 //
 
 #include "uri_resolver.h"
-#include "uri.h";
+#include "uri.h"
 #include "virtual_manager.h"
 
 UriResolver::UriResolver() {

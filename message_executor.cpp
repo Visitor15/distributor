@@ -45,5 +45,5 @@ InstructionID* MessageExecutor::getSharedFunctionID() {
 }
 
 void MessageExecutor::changeVtableEntry() {
-    _instructionId = VManager::GET_INSTANCE().replaceFunction(mySharedFunc->getInternalId(), SharedFunction("ReplacedSharedFunction", MessageExecutor::DO_CALCULATION));
+    _instructionId = VManager::GET_INSTANCE().replaceFunction(mySharedFunc->getInternalId(), *(new SharedFunction("ReplacedSharedFunction", MessageExecutor::DO_CALCULATION)));
 }

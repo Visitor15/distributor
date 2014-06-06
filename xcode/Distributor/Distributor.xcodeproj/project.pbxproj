@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3A59DE5194135DC005DD678 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A59DE4194135DC005DD678 /* libstdc++.6.0.9.dylib */; };
+		F3A59E1919413629005DD678 /* communicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59DE619413629005DD678 /* communicator.cpp */; };
+		F3A59E1A19413629005DD678 /* distributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59DE819413629005DD678 /* distributor.cpp */; };
+		F3A59E1B19413629005DD678 /* generic_instruction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59DEB19413629005DD678 /* generic_instruction.cpp */; };
+		F3A59E1C19413629005DD678 /* generic_request.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59DED19413629005DD678 /* generic_request.cpp */; };
+		F3A59E1D19413629005DD678 /* generic_response.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59DEF19413629005DD678 /* generic_response.cpp */; };
+		F3A59E1E19413629005DD678 /* global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59DF119413629005DD678 /* global.cpp */; };
+		F3A59E1F19413629005DD678 /* instruction_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59DF319413629005DD678 /* instruction_data.cpp */; };
+		F3A59E2019413629005DD678 /* instruction_id.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59DF519413629005DD678 /* instruction_id.cpp */; };
+		F3A59E2119413629005DD678 /* instruction_vtable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59DF919413629005DD678 /* instruction_vtable.cpp */; };
+		F3A59E2219413629005DD678 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59DFC19413629005DD678 /* main.cpp */; };
+		F3A59E2319413629005DD678 /* message_executor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59DFE19413629005DD678 /* message_executor.cpp */; };
+		F3A59E2419413629005DD678 /* network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E0019413629005DD678 /* network.cpp */; };
+		F3A59E2519413629005DD678 /* simple_task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E0519413629005DD678 /* simple_task.cpp */; };
+		F3A59E2619413629005DD678 /* socket_communicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E0719413629005DD678 /* socket_communicator.cpp */; };
+		F3A59E2719413629005DD678 /* task_communicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E0819413629005DD678 /* task_communicator.cpp */; };
+		F3A59E2819413629005DD678 /* task_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E0A19413629005DD678 /* task_handler.cpp */; };
+		F3A59E2919413629005DD678 /* task_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E0C19413629005DD678 /* task_manager.cpp */; };
+		F3A59E2A19413629005DD678 /* task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E0F19413629005DD678 /* task.cpp */; };
+		F3A59E2B19413629005DD678 /* uri_resolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E1119413629005DD678 /* uri_resolver.cpp */; };
+		F3A59E2C19413629005DD678 /* uri.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E1319413629005DD678 /* uri.cpp */; };
+		F3A59E2D19413629005DD678 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E1519413629005DD678 /* utils.cpp */; };
+		F3A59E2E19413629005DD678 /* virtual_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E1719413629005DD678 /* virtual_manager.cpp */; };
+		F3A59E3119413D6B005DD678 /* proxy_server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E2F19413D6B005DD678 /* proxy_server.cpp */; };
+		F3A59E3519414A01005DD678 /* tcp_socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3A59E3319414A01005DD678 /* tcp_socket.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F3A59DD6194135BD005DD678 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F3A59DD8194135BD005DD678 /* Distributor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Distributor; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3A59DE4194135DC005DD678 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		F3A59DE619413629005DD678 /* communicator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = communicator.cpp; path = ../../../communicator.cpp; sourceTree = "<group>"; };
+		F3A59DE719413629005DD678 /* communicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = communicator.h; path = ../../../communicator.h; sourceTree = "<group>"; };
+		F3A59DE819413629005DD678 /* distributor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = distributor.cpp; path = ../../../distributor.cpp; sourceTree = "<group>"; };
+		F3A59DE919413629005DD678 /* distributor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = distributor.h; path = ../../../distributor.h; sourceTree = "<group>"; };
+		F3A59DEA19413629005DD678 /* generic_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = generic_data.h; path = ../../../generic_data.h; sourceTree = "<group>"; };
+		F3A59DEB19413629005DD678 /* generic_instruction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = generic_instruction.cpp; path = ../../../generic_instruction.cpp; sourceTree = "<group>"; };
+		F3A59DEC19413629005DD678 /* generic_instruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = generic_instruction.h; path = ../../../generic_instruction.h; sourceTree = "<group>"; };
+		F3A59DED19413629005DD678 /* generic_request.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = generic_request.cpp; path = ../../../generic_request.cpp; sourceTree = "<group>"; };
+		F3A59DEE19413629005DD678 /* generic_request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = generic_request.h; path = ../../../generic_request.h; sourceTree = "<group>"; };
+		F3A59DEF19413629005DD678 /* generic_response.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = generic_response.cpp; path = ../../../generic_response.cpp; sourceTree = "<group>"; };
+		F3A59DF019413629005DD678 /* generic_response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = generic_response.h; path = ../../../generic_response.h; sourceTree = "<group>"; };
+		F3A59DF119413629005DD678 /* global.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = global.cpp; path = ../../../global.cpp; sourceTree = "<group>"; };
+		F3A59DF219413629005DD678 /* global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = global.h; path = ../../../global.h; sourceTree = "<group>"; };
+		F3A59DF319413629005DD678 /* instruction_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = instruction_data.cpp; path = ../../../instruction_data.cpp; sourceTree = "<group>"; };
+		F3A59DF419413629005DD678 /* instruction_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = instruction_data.h; path = ../../../instruction_data.h; sourceTree = "<group>"; };
+		F3A59DF519413629005DD678 /* instruction_id.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = instruction_id.cpp; path = ../../../instruction_id.cpp; sourceTree = "<group>"; };
+		F3A59DF619413629005DD678 /* instruction_id.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = instruction_id.h; path = ../../../instruction_id.h; sourceTree = "<group>"; };
+		F3A59DF719413629005DD678 /* instruction_request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = instruction_request.h; path = ../../../instruction_request.h; sourceTree = "<group>"; };
+		F3A59DF819413629005DD678 /* instruction_response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = instruction_response.h; path = ../../../instruction_response.h; sourceTree = "<group>"; };
+		F3A59DF919413629005DD678 /* instruction_vtable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = instruction_vtable.cpp; path = ../../../instruction_vtable.cpp; sourceTree = "<group>"; };
+		F3A59DFA19413629005DD678 /* instruction_vtable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = instruction_vtable.h; path = ../../../instruction_vtable.h; sourceTree = "<group>"; };
+		F3A59DFB19413629005DD678 /* instruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = instruction.h; path = ../../../instruction.h; sourceTree = "<group>"; };
+		F3A59DFC19413629005DD678 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../main.cpp; sourceTree = "<group>"; };
+		F3A59DFD19413629005DD678 /* manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = manager.h; path = ../../../manager.h; sourceTree = "<group>"; };
+		F3A59DFE19413629005DD678 /* message_executor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = message_executor.cpp; path = ../../../message_executor.cpp; sourceTree = "<group>"; };
+		F3A59DFF19413629005DD678 /* message_executor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = message_executor.h; path = ../../../message_executor.h; sourceTree = "<group>"; };
+		F3A59E0019413629005DD678 /* network.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = network.cpp; path = ../../../network.cpp; sourceTree = "<group>"; };
+		F3A59E0119413629005DD678 /* network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = network.h; path = ../../../network.h; sourceTree = "<group>"; };
+		F3A59E0219413629005DD678 /* secure_instruction_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = secure_instruction_data.h; path = ../../../secure_instruction_data.h; sourceTree = "<group>"; };
+		F3A59E0319413629005DD678 /* serializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = serializable.h; path = ../../../serializable.h; sourceTree = "<group>"; };
+		F3A59E0419413629005DD678 /* shared_function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shared_function.h; path = ../../../shared_function.h; sourceTree = "<group>"; };
+		F3A59E0519413629005DD678 /* simple_task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = simple_task.cpp; path = ../../../simple_task.cpp; sourceTree = "<group>"; };
+		F3A59E0619413629005DD678 /* simple_task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = simple_task.h; path = ../../../simple_task.h; sourceTree = "<group>"; };
+		F3A59E0719413629005DD678 /* socket_communicator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = socket_communicator.cpp; path = ../../../socket_communicator.cpp; sourceTree = "<group>"; };
+		F3A59E0819413629005DD678 /* task_communicator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = task_communicator.cpp; path = ../../../task_communicator.cpp; sourceTree = "<group>"; };
+		F3A59E0919413629005DD678 /* task_communicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = task_communicator.h; path = ../../../task_communicator.h; sourceTree = "<group>"; };
+		F3A59E0A19413629005DD678 /* task_handler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = task_handler.cpp; path = ../../../task_handler.cpp; sourceTree = "<group>"; };
+		F3A59E0B19413629005DD678 /* task_handler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = task_handler.h; path = ../../../task_handler.h; sourceTree = "<group>"; };
+		F3A59E0C19413629005DD678 /* task_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = task_manager.cpp; path = ../../../task_manager.cpp; sourceTree = "<group>"; };
+		F3A59E0D19413629005DD678 /* task_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = task_manager.h; path = ../../../task_manager.h; sourceTree = "<group>"; };
+		F3A59E0E19413629005DD678 /* task_payload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = task_payload.h; path = ../../../task_payload.h; sourceTree = "<group>"; };
+		F3A59E0F19413629005DD678 /* task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = task.cpp; path = ../../../task.cpp; sourceTree = "<group>"; };
+		F3A59E1019413629005DD678 /* task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = task.h; path = ../../../task.h; sourceTree = "<group>"; };
+		F3A59E1119413629005DD678 /* uri_resolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uri_resolver.cpp; path = ../../../uri_resolver.cpp; sourceTree = "<group>"; };
+		F3A59E1219413629005DD678 /* uri_resolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uri_resolver.h; path = ../../../uri_resolver.h; sourceTree = "<group>"; };
+		F3A59E1319413629005DD678 /* uri.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uri.cpp; path = ../../../uri.cpp; sourceTree = "<group>"; };
+		F3A59E1419413629005DD678 /* uri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uri.h; path = ../../../uri.h; sourceTree = "<group>"; };
+		F3A59E1519413629005DD678 /* utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = utils.cpp; path = ../../../utils.cpp; sourceTree = "<group>"; };
+		F3A59E1619413629005DD678 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utils.h; path = ../../../utils.h; sourceTree = "<group>"; };
+		F3A59E1719413629005DD678 /* virtual_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = virtual_manager.cpp; path = ../../../virtual_manager.cpp; sourceTree = "<group>"; };
+		F3A59E1819413629005DD678 /* virtual_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = virtual_manager.h; path = ../../../virtual_manager.h; sourceTree = "<group>"; };
+		F3A59E2F19413D6B005DD678 /* proxy_server.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = proxy_server.cpp; path = ../../../proxy_server.cpp; sourceTree = "<group>"; };
+		F3A59E3019413D6B005DD678 /* proxy_server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = proxy_server.h; path = ../../../proxy_server.h; sourceTree = "<group>"; };
+		F3A59E3219414669005DD678 /* sockets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sockets.h; path = ../../../sockets.h; sourceTree = "<group>"; };
+		F3A59E3319414A01005DD678 /* tcp_socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tcp_socket.cpp; path = ../../../tcp_socket.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3A59DD5194135BD005DD678 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3A59DE5194135DC005DD678 /* libstdc++.6.0.9.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3A59DCF194135BD005DD678 = {
+			isa = PBXGroup;
+			children = (
+				F3A59DE4194135DC005DD678 /* libstdc++.6.0.9.dylib */,
+				F3A59DDA194135BD005DD678 /* Distributor */,
+				F3A59DD9194135BD005DD678 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3A59DD9194135BD005DD678 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3A59DD8194135BD005DD678 /* Distributor */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3A59DDA194135BD005DD678 /* Distributor */ = {
+			isa = PBXGroup;
+			children = (
+				F3A59DE619413629005DD678 /* communicator.cpp */,
+				F3A59DE719413629005DD678 /* communicator.h */,
+				F3A59DE819413629005DD678 /* distributor.cpp */,
+				F3A59DE919413629005DD678 /* distributor.h */,
+				F3A59DEA19413629005DD678 /* generic_data.h */,
+				F3A59DEB19413629005DD678 /* generic_instruction.cpp */,
+				F3A59DEC19413629005DD678 /* generic_instruction.h */,
+				F3A59DED19413629005DD678 /* generic_request.cpp */,
+				F3A59DEE19413629005DD678 /* generic_request.h */,
+				F3A59DEF19413629005DD678 /* generic_response.cpp */,
+				F3A59DF019413629005DD678 /* generic_response.h */,
+				F3A59DF119413629005DD678 /* global.cpp */,
+				F3A59DF219413629005DD678 /* global.h */,
+				F3A59DFB19413629005DD678 /* instruction.h */,
+				F3A59DF319413629005DD678 /* instruction_data.cpp */,
+				F3A59DF419413629005DD678 /* instruction_data.h */,
+				F3A59DF519413629005DD678 /* instruction_id.cpp */,
+				F3A59DF619413629005DD678 /* instruction_id.h */,
+				F3A59DF719413629005DD678 /* instruction_request.h */,
+				F3A59DF819413629005DD678 /* instruction_response.h */,
+				F3A59DF919413629005DD678 /* instruction_vtable.cpp */,
+				F3A59DFA19413629005DD678 /* instruction_vtable.h */,
+				F3A59DFC19413629005DD678 /* main.cpp */,
+				F3A59DFD19413629005DD678 /* manager.h */,
+				F3A59DFE19413629005DD678 /* message_executor.cpp */,
+				F3A59DFF19413629005DD678 /* message_executor.h */,
+				F3A59E0019413629005DD678 /* network.cpp */,
+				F3A59E0119413629005DD678 /* network.h */,
+				F3A59E2F19413D6B005DD678 /* proxy_server.cpp */,
+				F3A59E3019413D6B005DD678 /* proxy_server.h */,
+				F3A59E0219413629005DD678 /* secure_instruction_data.h */,
+				F3A59E0319413629005DD678 /* serializable.h */,
+				F3A59E0419413629005DD678 /* shared_function.h */,
+				F3A59E0519413629005DD678 /* simple_task.cpp */,
+				F3A59E0619413629005DD678 /* simple_task.h */,
+				F3A59E0719413629005DD678 /* socket_communicator.cpp */,
+				F3A59E3219414669005DD678 /* sockets.h */,
+				F3A59E0F19413629005DD678 /* task.cpp */,
+				F3A59E1019413629005DD678 /* task.h */,
+				F3A59E0819413629005DD678 /* task_communicator.cpp */,
+				F3A59E0919413629005DD678 /* task_communicator.h */,
+				F3A59E0A19413629005DD678 /* task_handler.cpp */,
+				F3A59E0B19413629005DD678 /* task_handler.h */,
+				F3A59E0C19413629005DD678 /* task_manager.cpp */,
+				F3A59E0D19413629005DD678 /* task_manager.h */,
+				F3A59E0E19413629005DD678 /* task_payload.h */,
+				F3A59E3319414A01005DD678 /* tcp_socket.cpp */,
+				F3A59E1319413629005DD678 /* uri.cpp */,
+				F3A59E1419413629005DD678 /* uri.h */,
+				F3A59E1119413629005DD678 /* uri_resolver.cpp */,
+				F3A59E1219413629005DD678 /* uri_resolver.h */,
+				F3A59E1519413629005DD678 /* utils.cpp */,
+				F3A59E1619413629005DD678 /* utils.h */,
+				F3A59E1719413629005DD678 /* virtual_manager.cpp */,
+				F3A59E1819413629005DD678 /* virtual_manager.h */,
+			);
+			path = Distributor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3A59DD7194135BD005DD678 /* Distributor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3A59DE1194135BD005DD678 /* Build configuration list for PBXNativeTarget "Distributor" */;
+			buildPhases = (
+				F3A59DD4194135BD005DD678 /* Sources */,
+				F3A59DD5194135BD005DD678 /* Frameworks */,
+				F3A59DD6194135BD005DD678 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Distributor;
+			productName = Distributor;
+			productReference = F3A59DD8194135BD005DD678 /* Distributor */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3A59DD0194135BD005DD678 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = fORGED;
+			};
+			buildConfigurationList = F3A59DD3194135BD005DD678 /* Build configuration list for PBXProject "Distributor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F3A59DCF194135BD005DD678;
+			productRefGroup = F3A59DD9194135BD005DD678 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3A59DD7194135BD005DD678 /* Distributor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3A59DD4194135BD005DD678 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3A59E2719413629005DD678 /* task_communicator.cpp in Sources */,
+				F3A59E2B19413629005DD678 /* uri_resolver.cpp in Sources */,
+				F3A59E2819413629005DD678 /* task_handler.cpp in Sources */,
+				F3A59E2A19413629005DD678 /* task.cpp in Sources */,
+				F3A59E2C19413629005DD678 /* uri.cpp in Sources */,
+				F3A59E1B19413629005DD678 /* generic_instruction.cpp in Sources */,
+				F3A59E3519414A01005DD678 /* tcp_socket.cpp in Sources */,
+				F3A59E2D19413629005DD678 /* utils.cpp in Sources */,
+				F3A59E2019413629005DD678 /* instruction_id.cpp in Sources */,
+				F3A59E2919413629005DD678 /* task_manager.cpp in Sources */,
+				F3A59E3119413D6B005DD678 /* proxy_server.cpp in Sources */,
+				F3A59E2419413629005DD678 /* network.cpp in Sources */,
+				F3A59E2619413629005DD678 /* socket_communicator.cpp in Sources */,
+				F3A59E1F19413629005DD678 /* instruction_data.cpp in Sources */,
+				F3A59E2119413629005DD678 /* instruction_vtable.cpp in Sources */,
+				F3A59E1D19413629005DD678 /* generic_response.cpp in Sources */,
+				F3A59E2319413629005DD678 /* message_executor.cpp in Sources */,
+				F3A59E1E19413629005DD678 /* global.cpp in Sources */,
+				F3A59E1C19413629005DD678 /* generic_request.cpp in Sources */,
+				F3A59E2E19413629005DD678 /* virtual_manager.cpp in Sources */,
+				F3A59E1919413629005DD678 /* communicator.cpp in Sources */,
+				F3A59E2219413629005DD678 /* main.cpp in Sources */,
+				F3A59E1A19413629005DD678 /* distributor.cpp in Sources */,
+				F3A59E2519413629005DD678 /* simple_task.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F3A59DDF194135BD005DD678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F3A59DE0194135BD005DD678 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F3A59DE2194135BD005DD678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F3A59DE3194135BD005DD678 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3A59DD3194135BD005DD678 /* Build configuration list for PBXProject "Distributor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3A59DDF194135BD005DD678 /* Debug */,
+				F3A59DE0194135BD005DD678 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3A59DE1194135BD005DD678 /* Build configuration list for PBXNativeTarget "Distributor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3A59DE2194135BD005DD678 /* Debug */,
+				F3A59DE3194135BD005DD678 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3A59DD0194135BD005DD678 /* Project object */;
+}

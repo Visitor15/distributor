@@ -22,9 +22,9 @@ public:
     GenericData() {};
     virtual ~GenericData() {};
 
-    void serialize(std::ostream &stream) = 0;
+    virtual void serialize(std::ostream &stream) = 0;
 
-    void deSerialize(std::ostream &stream) = 0;
+    virtual void deSerialize(std::ostream &stream) = 0;
 
     /* VARIABLES */
 private:

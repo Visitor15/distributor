@@ -11,6 +11,7 @@
 
 #include <iostream>
 
+#include "sockets.h"
 #include "instruction_response.h"
 
 static const unsigned int DEFAULT_LISTEN_PORT = 11235;
@@ -46,6 +47,71 @@ public:
     }
 };
 
+/***************************************************************************************************
+ *  CLASS
+ **************************************************************************************************/
+class TCPSocket : public Socket<TCPSocket> {
+    /* FUNCTIONS */
+private:
+
+protected:
+//    virtual void initialize() = 0;
+
+public:
+
+    TCPSocket();
+
+    ~TCPSocket();
+
+    virtual void setPort(unsigned int port) = 0;
+
+//    virtual bool setAddress(std::string addr) = 0;
+
+    virtual bool connectTo() = 0;
+
+    virtual bool sendData(const void* buf, int length) = 0;
+
+    virtual bool receiveData(void* buf, int length) = 0;
+
+    /* VARIABLES */
+private:
+
+protected:
+
+public:
+};
+
+/***************************************************************************************************
+ *  CLASS
+ **************************************************************************************************/
+class UDPSocket : public Socket<UDPSocket> {
+    /* FUNCTIONS */
+private:
+
+protected:
+    virtual void initialize() = 0;
+
+public:
+
+    UDPSocket();
+
+    ~UDPSocket();
+
+    virtual void setPort(unsigned int port) = 0;
+
+    virtual bool setAddress(std::string addr) = 0;
+
+    /* VARIABLES */
+private:
+
+protected:
+
+public:
+};
+
+/***************************************************************************************************
+ *  CLASS
+ **************************************************************************************************/
 class Network {
     /* FUNCTIONS */
 private:
