@@ -55,23 +55,26 @@ class TCPSocket : public Socket<TCPSocket> {
 private:
 
 protected:
-//    virtual void initialize() = 0;
 
 public:
 
     TCPSocket();
 
+    TCPSocket(int socket);
+
     ~TCPSocket();
 
-    virtual void setPort(unsigned int port) = 0;
+    virtual void setPort(unsigned int port);
 
-//    virtual bool setAddress(std::string addr) = 0;
+    virtual bool connectTo();
 
-    virtual bool connectTo() = 0;
+    virtual bool sendData(const void* buf, int length);
 
-    virtual bool sendData(const void* buf, int length) = 0;
+    virtual bool receiveData(void* buf, int length);
 
-    virtual bool receiveData(void* buf, int length) = 0;
+    virtual bool setSocketListening(unsigned int port);
+
+    virtual TCPSocket* accept();
 
     /* VARIABLES */
 private:
@@ -89,7 +92,6 @@ class UDPSocket : public Socket<UDPSocket> {
 private:
 
 protected:
-    virtual void initialize() = 0;
 
 public:
 
@@ -97,9 +99,15 @@ public:
 
     ~UDPSocket();
 
-    virtual void setPort(unsigned int port) = 0;
+    virtual void setPort(unsigned int port);
 
-    virtual bool setAddress(std::string addr) = 0;
+    virtual bool connectTo();
+
+    virtual bool sendData(const void* buf, int length);
+
+    virtual bool receiveData(void* buf, int length);
+
+    virtual bool setSocketListening(unsigned int port);
 
     /* VARIABLES */
 private:

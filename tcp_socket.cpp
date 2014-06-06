@@ -8,8 +8,12 @@
 
 #include "network.h"
 
-TCPSocket::TCPSocket() {
+TCPSocket::TCPSocket() : Socket<TCPSocket>() {
     _isConnected = false;
+}
+
+TCPSocket::TCPSocket(int socket) : Socket<TCPSocket>(socket) {
+    this->_socket = socket;
 }
 
 TCPSocket::~TCPSocket() {
@@ -71,4 +75,21 @@ bool TCPSocket::receiveData(void* buf, int length) {
     }
 
     return true;
+}
+
+bool TCPSocket::setSocketListening(unsigned int queueLength) {
+    if(listen(_socket, queueLength) < 0) {
+        return false;
+    }
+
+    return true;
+}
+
+TCPSocket* TCPSocket::accept() {
+    int newConnection;
+    if((newConnection = ::accept(_socket, NULL, 0)) < 0) {
+        return nullptr;
+    }
+
+    return new TCPSocket(newConnection);
 }

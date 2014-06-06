@@ -64,6 +64,10 @@ protected:
 public:
     Socket() {};
 
+    Socket(int socket) {
+        _socket = socket;
+    }
+
     virtual ~Socket() {
 #ifdef WIN32
         closesocket(_socket);
@@ -82,6 +86,8 @@ public:
     virtual bool sendData(const void* buf, int length) = 0;
 
     virtual bool receiveData(void* buf, int length) = 0;
+
+    virtual bool setSocketListening(unsigned int port) = 0;
 
     /* VARIABLES */
 private:
