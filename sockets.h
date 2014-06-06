@@ -48,7 +48,20 @@ protected:
         return true;
     }
 
-//    virtual void initialize() = 0;
+    bool setLocalPort(unsigned short localPort) {
+        sockaddr_in localAddr;
+        memset(&localAddr, 0, sizeof(localAddr));
+        localAddr.sin_family = AF_INET;
+        localAddr.sin_addr.s_addr = htonl(INADDR_ANY);
+        localAddr.sin_port = htons(localPort);
+
+
+        if (bind(_socket, (sockaddr *) &localAddr, sizeof(sockaddr_in)) < 0) {
+            return false;
+        }
+
+        return true;
+    }
 
     bool setLocalAddressAndPort(const std::string &localAddress, unsigned int localPort) {
         sockaddr_in _localAddr;

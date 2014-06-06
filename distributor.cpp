@@ -16,6 +16,7 @@
 #include "instruction_id.h"
 #include "generic_response.h"
 #include "message_executor.h"
+#include "network.h"
 
 SharedFunction* sharedFunc1;
 SharedFunction* sharedFunc2;
@@ -28,7 +29,18 @@ InstructionID* instruction;
 GenericInstructionResponse* response;
 InstructionData* data;
 
+TCPSocket* serverSocket;
+TCPSocket* clientSocket;
+
 void Distributor::DISTRIBUTE() {
+
+    serverSocket = new TCPSocket();
+    serverSocket->setPort(DEFAULT_LISTEN_PORT);
+    serverSocket->connectTo();
+    serverSocket->setSocketListening(DEFAULT_LISTEN_PORT);
+
+//    clientSocket = new TCPSocket("127.0.0.1", DEFAULT_LISTEN_PORT);
+
     messageExec = new MessageExecutor();
 
     sharedFunc1 = new SharedFunction("TestSharedFunction1", Distributor::MY_SHARED_FUNCTION3);

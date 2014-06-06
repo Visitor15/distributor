@@ -10,6 +10,7 @@
 
 TCPSocket::TCPSocket() : Socket<TCPSocket>() {
     _isConnected = false;
+    _socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 }
 
 TCPSocket::TCPSocket(int socket) : Socket<TCPSocket>(socket) {
@@ -17,11 +18,11 @@ TCPSocket::TCPSocket(int socket) : Socket<TCPSocket>(socket) {
 }
 
 TCPSocket::~TCPSocket() {
-
 }
 
 void TCPSocket::setPort(unsigned int port) {
     _port = port;
+    setLocalPort(_port);
 }
 
 //bool TCPSocket::setAddress(std::string addr) {
@@ -45,7 +46,6 @@ void TCPSocket::setPort(unsigned int port) {
 //}
 
 bool TCPSocket::connectTo() {
-    _socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if(connect(_socket, (sockaddr*) &_sockAddr, sizeof(_sockAddr)) < 0) {
         return false;
     }
