@@ -9,12 +9,20 @@
 #include "network.h"
 
 TCPSocket::TCPSocket() : Socket<TCPSocket>() {
-    _isConnected = false;
+    _isConnected = true;
     _socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 }
 
 TCPSocket::TCPSocket(int socket) : Socket<TCPSocket>(socket) {
     this->_socket = socket;
+}
+
+TCPSocket::TCPSocket(std::string address, int port) : Socket<TCPSocket>() {
+    _isConnected = false;
+    _socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+
+    setAddress(address, port, _sockAddr);
+    connectTo();
 }
 
 TCPSocket::~TCPSocket() {
@@ -50,6 +58,8 @@ bool TCPSocket::connectTo() {
         return false;
     }
 
+    _isConnected = true;
+
     return true;
 }
 
@@ -73,6 +83,8 @@ bool TCPSocket::receiveData(void* buf, int length) {
     if(recv(_socket, buf, length, 0) < 0) {
         return false;
     }
+
+    std::cout << "Listening socket received: " << buf << std::endl;
 
     return true;
 }

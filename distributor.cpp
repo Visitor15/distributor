@@ -123,6 +123,9 @@ void Distributor::DISTRIBUTE() {
         std::cout << "Failed to execute instruction: " << instruction->getExternalId() << std::endl;
     }
 
+    TCPSocket clientSocket("127.0.0.1", DEFAULT_LISTEN_PORT);
+    clientSocket.sendData("Hello, Barbara", 14);
+
     std::cout << "Programming terminating" << std::endl;
 
     int _val;

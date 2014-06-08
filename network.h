@@ -62,6 +62,8 @@ public:
 
     TCPSocket(int socket);
 
+    TCPSocket(std::string address, int port);
+
     ~TCPSocket();
 
     virtual void setPort(unsigned int port);
