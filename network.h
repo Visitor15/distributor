@@ -11,7 +11,6 @@
 
 #include <iostream>
 
-#include "sockets.h"
 #include "instruction_response.h"
 
 static const unsigned int DEFAULT_LISTEN_PORT = 11235;
@@ -50,74 +49,74 @@ public:
 /***************************************************************************************************
  *  CLASS
  **************************************************************************************************/
-class TCPSocket : public Socket<TCPSocket> {
-    /* FUNCTIONS */
-private:
-
-protected:
-
-public:
-
-    TCPSocket();
-
-    TCPSocket(int socket);
-
-    TCPSocket(std::string address, int port);
-
-    ~TCPSocket();
-
-    virtual void setPort(unsigned int port);
-
-    virtual bool connectTo();
-
-    virtual bool sendData(const void* buf, int length);
-
-    virtual bool receiveData(void* buf, int length);
-
-    virtual bool setSocketListening(unsigned int port);
-
-    virtual TCPSocket* accept();
-
-    /* VARIABLES */
-private:
-
-protected:
-
-public:
-};
+//class TCPSocket : public Socket<TCPSocket> {
+//    /* FUNCTIONS */
+//private:
+//
+//protected:
+//
+//public:
+//
+//    TCPSocket();
+//
+//    TCPSocket(int socket);
+//
+//    TCPSocket(std::string address, int port);
+//
+//    ~TCPSocket();
+//
+//    virtual void setPort(unsigned int port);
+//
+//    virtual bool connectTo();
+//
+//    virtual bool sendData(const void* buf, int length);
+//
+//    virtual bool receiveData(void* buf, int length);
+//
+//    virtual bool setSocketListening(unsigned int port);
+//
+//    virtual TCPSocket* accept();
+//
+//    /* VARIABLES */
+//private:
+//
+//protected:
+//
+//public:
+//};
 
 /***************************************************************************************************
  *  CLASS
  **************************************************************************************************/
-class UDPSocket : public Socket<UDPSocket> {
-    /* FUNCTIONS */
-private:
-
-protected:
-
-public:
-
-    UDPSocket();
-
-    ~UDPSocket();
-
-    virtual void setPort(unsigned int port);
-
-    virtual bool connectTo();
-
-    virtual bool sendData(const void* buf, int length);
-
-    virtual bool receiveData(void* buf, int length);
-
-    virtual bool setSocketListening(unsigned int port);
-
-    /* VARIABLES */
-private:
-
-protected:
-
-public:
-};
+//class UDPSocket : public Socket<UDPSocket> {
+//    /* FUNCTIONS */
+//private:
+//
+//protected:
+//
+//public:
+//
+//    UDPSocket();
+//
+//    ~UDPSocket();
+//
+//    virtual void setPort(unsigned int port);
+//
+//    virtual bool connectTo();
+//
+//    virtual bool sendData(const void* buf, int length);
+//
+//    virtual bool receiveData(void* buf, int length);
+//
+//    virtual bool setSocketListening(unsigned int port);
+//
+//    /* VARIABLES */
+//private:
+//
+//protected:
+//
+//public:
+//};
 
 /***************************************************************************************************
  *  CLASS

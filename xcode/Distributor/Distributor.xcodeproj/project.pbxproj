@@ -27,12 +27,13 @@
 		F3DC713119465ABD00123E23 /* task_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3DC711119465ABD00123E23 /* task_handler.cpp */; };
 		F3DC713219465ABD00123E23 /* task_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3DC711319465ABD00123E23 /* task_manager.cpp */; };
 		F3DC713319465ABD00123E23 /* task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3DC711619465ABD00123E23 /* task.cpp */; };
-		F3DC713419465ABD00123E23 /* tcp_socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3DC711819465ABD00123E23 /* tcp_socket.cpp */; };
 		F3DC713519465ABD00123E23 /* uri_resolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3DC711919465ABD00123E23 /* uri_resolver.cpp */; };
 		F3DC713619465ABD00123E23 /* uri.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3DC711B19465ABD00123E23 /* uri.cpp */; };
 		F3DC713719465ABD00123E23 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3DC711D19465ABD00123E23 /* utils.cpp */; };
 		F3DC713819465ABD00123E23 /* virtual_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3DC711F19465ABD00123E23 /* virtual_manager.cpp */; };
 		F3DC713A19465AF100123E23 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3DC713919465AF100123E23 /* libstdc++.6.0.9.dylib */; };
+		F3DC71411946641600123E23 /* generic_socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3DC713F1946641600123E23 /* generic_socket.cpp */; };
+		F3DC7144194672A900123E23 /* server_socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3DC7142194672A900123E23 /* server_socket.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,7 +89,6 @@
 		F3DC710B19465ABD00123E23 /* simple_task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = simple_task.cpp; path = ../../../simple_task.cpp; sourceTree = "<group>"; };
 		F3DC710C19465ABD00123E23 /* simple_task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = simple_task.h; path = ../../../simple_task.h; sourceTree = "<group>"; };
 		F3DC710D19465ABD00123E23 /* socket_communicator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = socket_communicator.cpp; path = ../../../socket_communicator.cpp; sourceTree = "<group>"; };
-		F3DC710E19465ABD00123E23 /* sockets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sockets.h; path = ../../../sockets.h; sourceTree = "<group>"; };
 		F3DC710F19465ABD00123E23 /* task_communicator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = task_communicator.cpp; path = ../../../task_communicator.cpp; sourceTree = "<group>"; };
 		F3DC711019465ABD00123E23 /* task_communicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = task_communicator.h; path = ../../../task_communicator.h; sourceTree = "<group>"; };
 		F3DC711119465ABD00123E23 /* task_handler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = task_handler.cpp; path = ../../../task_handler.cpp; sourceTree = "<group>"; };
@@ -98,7 +98,6 @@
 		F3DC711519465ABD00123E23 /* task_payload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = task_payload.h; path = ../../../task_payload.h; sourceTree = "<group>"; };
 		F3DC711619465ABD00123E23 /* task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = task.cpp; path = ../../../task.cpp; sourceTree = "<group>"; };
 		F3DC711719465ABD00123E23 /* task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = task.h; path = ../../../task.h; sourceTree = "<group>"; };
-		F3DC711819465ABD00123E23 /* tcp_socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tcp_socket.cpp; path = ../../../tcp_socket.cpp; sourceTree = "<group>"; };
 		F3DC711919465ABD00123E23 /* uri_resolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uri_resolver.cpp; path = ../../../uri_resolver.cpp; sourceTree = "<group>"; };
 		F3DC711A19465ABD00123E23 /* uri_resolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = uri_resolver.h; path = ../../../uri_resolver.h; sourceTree = "<group>"; };
 		F3DC711B19465ABD00123E23 /* uri.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = uri.cpp; path = ../../../uri.cpp; sourceTree = "<group>"; };
@@ -108,6 +107,11 @@
 		F3DC711F19465ABD00123E23 /* virtual_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = virtual_manager.cpp; path = ../../../virtual_manager.cpp; sourceTree = "<group>"; };
 		F3DC712019465ABD00123E23 /* virtual_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = virtual_manager.h; path = ../../../virtual_manager.h; sourceTree = "<group>"; };
 		F3DC713919465AF100123E23 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		F3DC713D19465E7900123E23 /* socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socket.h; sourceTree = "<group>"; };
+		F3DC713F1946641600123E23 /* generic_socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = generic_socket.cpp; sourceTree = "<group>"; };
+		F3DC71401946641600123E23 /* generic_socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generic_socket.h; sourceTree = "<group>"; };
+		F3DC7142194672A900123E23 /* server_socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = server_socket.cpp; sourceTree = "<group>"; };
+		F3DC7143194672A900123E23 /* server_socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = server_socket.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 		F3DC70DF19465A9D00123E23 /* Distributor */ = {
 			isa = PBXGroup;
 			children = (
+				F3DC713B19465E3C00123E23 /* Networking */,
 				F3DC70E919465ABD00123E23 /* communicator.cpp */,
 				F3DC70EA19465ABD00123E23 /* communicator.h */,
 				F3DC70EB19465ABD00123E23 /* distributor.cpp */,
@@ -179,7 +184,6 @@
 				F3DC710B19465ABD00123E23 /* simple_task.cpp */,
 				F3DC710C19465ABD00123E23 /* simple_task.h */,
 				F3DC710D19465ABD00123E23 /* socket_communicator.cpp */,
-				F3DC710E19465ABD00123E23 /* sockets.h */,
 				F3DC710F19465ABD00123E23 /* task_communicator.cpp */,
 				F3DC711019465ABD00123E23 /* task_communicator.h */,
 				F3DC711119465ABD00123E23 /* task_handler.cpp */,
@@ -189,7 +193,6 @@
 				F3DC711519465ABD00123E23 /* task_payload.h */,
 				F3DC711619465ABD00123E23 /* task.cpp */,
 				F3DC711719465ABD00123E23 /* task.h */,
-				F3DC711819465ABD00123E23 /* tcp_socket.cpp */,
 				F3DC711919465ABD00123E23 /* uri_resolver.cpp */,
 				F3DC711A19465ABD00123E23 /* uri_resolver.h */,
 				F3DC711B19465ABD00123E23 /* uri.cpp */,
@@ -201,6 +204,18 @@
 				F3DC70E219465A9D00123E23 /* Distributor.1 */,
 			);
 			path = Distributor;
+			sourceTree = "<group>";
+		};
+		F3DC713B19465E3C00123E23 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F3DC713D19465E7900123E23 /* socket.h */,
+				F3DC713F1946641600123E23 /* generic_socket.cpp */,
+				F3DC71401946641600123E23 /* generic_socket.h */,
+				F3DC7142194672A900123E23 /* server_socket.cpp */,
+				F3DC7143194672A900123E23 /* server_socket.h */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +272,6 @@
 				F3DC713119465ABD00123E23 /* task_handler.cpp in Sources */,
 				F3DC712319465ABD00123E23 /* generic_instruction.cpp in Sources */,
 				F3DC713719465ABD00123E23 /* utils.cpp in Sources */,
-				F3DC713419465ABD00123E23 /* tcp_socket.cpp in Sources */,
 				F3DC712819465ABD00123E23 /* instruction_id.cpp in Sources */,
 				F3DC713819465ABD00123E23 /* virtual_manager.cpp in Sources */,
 				F3DC712D19465ABD00123E23 /* proxy_server.cpp in Sources */,
@@ -266,6 +280,7 @@
 				F3DC713519465ABD00123E23 /* uri_resolver.cpp in Sources */,
 				F3DC712919465ABD00123E23 /* instruction_vtable.cpp in Sources */,
 				F3DC712E19465ABD00123E23 /* simple_task.cpp in Sources */,
+				F3DC7144194672A900123E23 /* server_socket.cpp in Sources */,
 				F3DC713619465ABD00123E23 /* uri.cpp in Sources */,
 				F3DC713219465ABD00123E23 /* task_manager.cpp in Sources */,
 				F3DC712519465ABD00123E23 /* generic_response.cpp in Sources */,
@@ -275,6 +290,7 @@
 				F3DC713319465ABD00123E23 /* task.cpp in Sources */,
 				F3DC712619465ABD00123E23 /* global.cpp in Sources */,
 				F3DC712419465ABD00123E23 /* generic_request.cpp in Sources */,
+				F3DC71411946641600123E23 /* generic_socket.cpp in Sources */,
 				F3DC712119465ABD00123E23 /* communicator.cpp in Sources */,
 				F3DC712A19465ABD00123E23 /* main.cpp in Sources */,
 				F3DC712219465ABD00123E23 /* distributor.cpp in Sources */,

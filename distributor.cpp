@@ -17,6 +17,8 @@
 #include "generic_response.h"
 #include "message_executor.h"
 #include "network.h"
+#include "generic_socket.h"
+#include "server_socket.h"
 
 SharedFunction* sharedFunc1;
 SharedFunction* sharedFunc2;
@@ -29,17 +31,25 @@ InstructionID* instruction;
 GenericInstructionResponse* response;
 InstructionData* data;
 
-TCPSocket* serverSocket;
-TCPSocket* clientSocket;
+//TCPSocket* serverSocket;
+//TCPSocket* clientSocket;
+
+ServerSocket* mServerSocket;
+GenericSocket* mSocket;
 
 void Distributor::DISTRIBUTE() {
 
-    serverSocket = new TCPSocket();
-    serverSocket->setPort(DEFAULT_LISTEN_PORT);
-    serverSocket->connectTo();
-    serverSocket->setSocketListening(DEFAULT_LISTEN_PORT);
+//    serverSocket = new TCPSocket();
+//    serverSocket->setPort(DEFAULT_LISTEN_PORT);
+//    serverSocket->connectTo();
+//    serverSocket->setSocketListening(DEFAULT_LISTEN_PORT);
 
 //    clientSocket = new TCPSocket("127.0.0.1", DEFAULT_LISTEN_PORT);
+
+//    mSocket = new GenericSocket();
+
+    mServerSocket = new ServerSocket();
+    mServerSocket->beginListening();
 
     messageExec = new MessageExecutor();
 
@@ -70,6 +80,9 @@ void Distributor::DISTRIBUTE() {
         std::cout << "Instruction name: " << instruction->getExternalId() << std::endl;
         std::cout << "Instruction ID: " << std::to_string(instruction->getInternalId()) << std::endl;
     }
+
+    mSocket = new GenericSocket("127.0.0.1", DEFAULT_LISTEN_PORT);
+    mSocket->sendData("CLIENT SAYS HELLO!", 19);
 
     response = new GenericInstructionResponse();
     response->initialize();
@@ -123,10 +136,12 @@ void Distributor::DISTRIBUTE() {
         std::cout << "Failed to execute instruction: " << instruction->getExternalId() << std::endl;
     }
 
-    TCPSocket clientSocket("127.0.0.1", DEFAULT_LISTEN_PORT);
-    clientSocket.sendData("Hello, Barbara", 14);
+//    TCPSocket clientSocket("127.0.0.1", DEFAULT_LISTEN_PORT);
+//    clientSocket.sendData("Hello, Barbara", 14);
 
-    std::cout << "Programming terminating" << std::endl;
+    std::cout << "Program terminating" << std::endl;
+
+    mServerSocket->stopListening();
 
     int _val;
     std::cin >> _val;
